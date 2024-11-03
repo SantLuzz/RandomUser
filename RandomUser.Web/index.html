@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Relatório de Usuários</title>
+</head>
+<body>
+<div class="container">
+  <h1>Relatório de Usuários</h1>
+
+  <!-- Formulário para importação de usuários -->
+  <div id="importSection" class="form-section">
+    <h2>Importar Usuários</h2>
+    <form id="importForm">
+      <label for="userCount">Quantidade:</label>
+      <input type="number" value="15" id="userCount" min="1" required>
+
+      <label for="country">País:</label>
+      <input type="text" value="br" id="country" required>
+
+      <button id="importButton" class="btn">Importar Usuários</button>
+    </form>
+  </div>
+
+  <div class="table-section">
+    <h2>Lista de Usuários</h2>
+    <table id="userTable">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Gênero</th>
+        <th>Data de Nascimento</th>
+        <th>Nacionalidade</th>
+        <th>Endereço</th>
+        <th>Telefone</th>
+        <th>Celular</th>
+        <th>Ações</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!-- Os dados dos usuários serão inseridos aqui -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetchUsers();
+  });
+</script>
+</body>
+</html>
